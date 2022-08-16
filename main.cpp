@@ -20,7 +20,7 @@ struct smart_array {
         m_array = nullptr;
     }
     void add_element(const int &n) {
-        if (n >= 0 && n <= m_max_size) {
+        if (m_size >= 0 && m_size < m_max_size) {
             m_array[m_size] = n;
             m_size++;
         }
